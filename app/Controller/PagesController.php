@@ -31,6 +31,7 @@ App::uses('AppController', 'Controller');
  */
 class PagesController extends AppController {
 
+
 /**
  * Controller name
  *
@@ -52,6 +53,9 @@ class PagesController extends AppController {
  * @return void
  */
 	public function display() {
+
+		$this->layout = 'viewpost';
+		
 		$path = func_get_args();
 
 		$count = count($path);

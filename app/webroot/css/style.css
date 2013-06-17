@@ -48,13 +48,56 @@ table {
 }
 
 body {
-	background: #f4f4f4;
+	background: url(/jaredrigby-3/img/stripe-bg.png);
 	font-family: 'Open Sans', sans-serif;
 	color: #6E6E6E;
 }
 
-h1, h2 {
+h1, h2, h4 {
 	font-family: 'Georgia', serif;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 16px;
+	margin: 20px 0;
+}
+
+ul {
+	list-style: square;
+	list-style-position: inside;
+}
+
+ul li {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff9900;
+	text-decoration: underline;
+}
+
+code {
+	font-family: 'Inconsolata', sans-serif;
+	font-size: 16px;
+	color: #000;
+	background: #eee;
+	margin: 15px 0;
+}
+
+small {
+	font-size: 12px;
+}
+
+.nice-border {
+	padding: 1px;
+	border: 1px solid #ccc;
 }
 
 .float-left {
@@ -78,6 +121,12 @@ h1, h2 {
 	background: #ffffff;
 	min-width: 655px;
 	padding-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+nav {
+	width: 435px;
+	margin: 0 auto;
 }
 
 nav ul {
@@ -87,6 +136,7 @@ nav ul {
 nav ul li{
 	display: inline-block;
 	text-transform: uppercase;
+	font-size: 16px;
 	margin: 0 10px;
 }
 
@@ -108,7 +158,11 @@ nav ul li a:hover {
 	text-align: center;
 	line-height: 100px;
 	text-decoration: none;
-	}
+}
+
+.logo:hover {
+	text-decoration: none;
+}
 
 .jared {
 	color: #999999;
@@ -118,11 +172,34 @@ nav ul li a:hover {
 	color: #FF9900;
 	font-family: 'Georgia', serif;
 	font-size: 1.065em;
+	font-weight: bold;
 }
 
 #content {
 	margin: 0 auto;
 	padding-bottom: 50px;
+}
+
+#viewpost {
+	margin: 0 auto;
+	max-width: 1000px
+}
+
+#viewpost > .left-column {
+	width: 600px;
+}
+
+#viewpost > .right-column {
+	width: 265px;
+	margin-left: 40px;
+}
+
+#viewpost > .post-box {
+	width: 100%;
+}
+
+.left-column > .post-box, .right-column > .post-box {
+	width: 100%;
 }
 
 .post-box {
@@ -136,8 +213,7 @@ nav ul li a:hover {
 
 .post-box.masonry-brick{
 	width: 400px;
-	min-height: 200px;
-	max-height: 500px;
+	min-height: 240px;
 }
 
 .post-content.masonry-brick {
@@ -153,11 +229,15 @@ nav ul li a:hover {
 	margin-bottom: 15px;
 }
 
-.post-content p {
-	font-size: 16px;
-	line-height: 20px;
-	margin-bottom: 10px;
+.post-content h4 {
 	font-style: italic;
+	font-size: 16px;
+	line-height: 24px;
+	padding-bottom: 45px;
+}
+
+.post-content img {
+	margin: 5px 0 10px 10px;
 }
 
 .post-content p {
@@ -174,6 +254,11 @@ nav ul li a:hover {
 	width: 100%;
 	margin: 5px 0 10px 0;
 	text-align: right;
+}
+
+.post-content .category-list li {
+	font-size: 16px;
+	line-height: 24px;
 }
 
 .post-btns {
@@ -204,7 +289,7 @@ nav ul li a:hover {
 	width: 48px;
 	height: 48px;
 	background: #ccc;
-	margin: 10px 41px;
+	margin: 20px 41px;
 }
 
 .social.plus {background: url(/jaredrigby-3/img/social/plus.png);}

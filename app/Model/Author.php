@@ -1,18 +1,16 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Post Model
+ * Author Model
  *
+ * @property Post $Post
  */
-class Post extends AppModel {
+class Author extends AppModel {
 
-	public $belongsTo = array(
-		'Category' => array(
-			'className' => 'Category',
-			'foreignKey' => 'category_id'
-		),
-		'Author' => array(
-			'className' => 'Author',
+
+	public $hasMany = array(
+		'Posts' => array(
+			'className' => 'Post',
 			'foreignKey' => 'author_id'
 		)
 	);
@@ -22,7 +20,7 @@ class Post extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'title';
+	public $displayField = 'name';
 
 /**
  * Validation rules
@@ -31,14 +29,6 @@ class Post extends AppModel {
  */
 	public $validate = array(
 		'id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -48,7 +38,7 @@ class Post extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'title' => array(
+		'name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -58,7 +48,7 @@ class Post extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'author' => array(
+		'password' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -68,17 +58,7 @@ class Post extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'category' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'content' => array(
+		'role' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -109,4 +89,7 @@ class Post extends AppModel {
 			),
 		),
 	);
+
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
 }

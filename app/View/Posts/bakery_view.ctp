@@ -21,6 +21,11 @@
 			<?php echo h($post['Category']['title']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Summary'); ?></dt>
+		<dd>
+			<?php echo h($post['Post']['summary']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Content'); ?></dt>
 		<dd>
 			<?php echo h($post['Post']['content']); ?>

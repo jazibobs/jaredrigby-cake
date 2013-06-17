@@ -22,19 +22,13 @@
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>Portfolio of Cheshire Web Developer Jared Rigby
-	</title>
+	<title>Portfolio of Cheshire Web Developer Jared Rigby</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('style');
-
-		$currentpage = $_SERVER['REQUEST_URI'];
-		if (!strpos($currentpage, '/view/') == true) {
-			echo $this->Html->script('masonry');
-		}
-		echo $this->Html->script('main');
 	?>
 </head>
 <body>
@@ -56,7 +50,7 @@
 
 	<div id="container">
 		
-		<div id="content">
+		<div id="viewpost">
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		

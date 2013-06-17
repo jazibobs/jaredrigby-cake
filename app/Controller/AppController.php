@@ -32,6 +32,7 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+
 	function beforeFilter() {
         if (isset($this->params['bakery']) && $this->params['bakery'] == 'admin') {
             $this->layout = 'admin';

@@ -5,8 +5,9 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
 			<th><?php echo $this->Paginator->sort('author'); ?></th>
+			<th><?php echo $this->Paginator->sort('imageurl'); ?></th>
 			<th><?php echo $this->Paginator->sort('category_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('content'); ?></th>
+			<th><?php echo $this->Paginator->sort('summary'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -16,8 +17,9 @@
 		<td><?php echo h($post['Post']['id']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['title']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['author']); ?>&nbsp;</td>
+		<td><?php echo h($post['Post']['imageurl']); ?>&nbsp;</td>
 		<td><?php echo h($post['Category']['title']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['content']); ?>&nbsp;</td>
+		<td><?php echo h($post['Post']['summary']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['created']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['modified']); ?>&nbsp;</td>
 		<td class="actions">

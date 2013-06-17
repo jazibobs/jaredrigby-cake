@@ -17,15 +17,14 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'Jared Rigby\'s back end is full of cakephp');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
+		<?php echo $title_for_layout; ?> - <?php echo $cakeDescription ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
@@ -40,7 +39,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<h1><?php echo $this->Html->link($cakeDescription, '/'); ?></h1>
+			<ul>
+				<li><a href="/jaredrigby-3/bakery/posts/">Manage Posts</a></li>
+				<li><a href="/jaredrigby-3/bakery/categories/">Manage Categories</a></li>
+			</ul>
 		</div>
 		<div id="content">
 

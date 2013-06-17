@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class PostsController extends AppController {
 
-	var $uses = array('Post','Category');
+	var $uses = array('Post','Category','Author');
 
 /**
  * index method
@@ -36,6 +36,11 @@ class PostsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+
+		$this->layout = 'viewpost';
+
+		$this->set('categories', $this->Category->find('all'));
+
 		if (!$this->Post->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
@@ -53,13 +58,32 @@ class PostsController extends AppController {
 	public function viewcategory($category_id = null){
 
 		$this->set('categories', $this->Category->find('all'));
-		
+
 		if (!$this->Post->exists($category_id)) {
 			throw new NotFoundException(__('Invalid category'));
 		}
 		$options = array('conditions' => array('Post.category_id' => $category_id));
 		$this->set('posts', $this->Post->find('all', $options));
 	}
+
+/**	
+* viewauthor method
+*
+*	@throws 
+*	@param string $author_id
+*	@return void
+*/
+	public function viewauthor($author_id = null){
+
+		$this->set('categories', $this->Category->find('all'));
+
+		if (!$this->Post->exists($author_id)) {
+			throw new NotFoundException(__('Invalid category'));
+		}
+		$options = array('conditions' => array('Post.author_id' => $author_id));
+		$this->set('posts', $this->Post->find('all', $options));
+	}
+
 
 /**
  * bakery_index method

@@ -18,7 +18,9 @@
 	<?php
 		echo $this->Form->input('title');
 		echo $this->Form->input('author');
+		echo $this->Form->input('imageurl');
 		echo $this->Form->input('category_id', array('options' => $categoryarray));
+		echo $this->Form->input('summary');
 		echo $this->Form->input('content');
 	?>
 	</fieldset>

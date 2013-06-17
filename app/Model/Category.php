@@ -13,7 +13,6 @@ class Category extends AppModel {
 			'className' => 'Post',
 			'foreignKey' => 'category_id'
 		)
-
 	);
 
 /**
