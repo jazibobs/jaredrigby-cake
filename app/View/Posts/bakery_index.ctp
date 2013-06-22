@@ -4,7 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
-			<th><?php echo $this->Paginator->sort('author'); ?></th>
+			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('imageurl'); ?></th>
 			<th><?php echo $this->Paginator->sort('category_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('summary'); ?></th>
@@ -16,7 +16,7 @@
 	<tr>
 		<td><?php echo h($post['Post']['id']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['title']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['author']); ?>&nbsp;</td>
+		<td><?php echo h($post['User']['name']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['imageurl']); ?>&nbsp;</td>
 		<td><?php echo h($post['Category']['title']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['summary']); ?>&nbsp;</td>

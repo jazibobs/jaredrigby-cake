@@ -31,7 +31,6 @@ App::uses('AppController', 'Controller');
  */
 class PagesController extends AppController {
 
-
 /**
  * Controller name
  *

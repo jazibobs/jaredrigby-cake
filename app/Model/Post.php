@@ -11,9 +11,9 @@ class Post extends AppModel {
 			'className' => 'Category',
 			'foreignKey' => 'category_id'
 		),
-		'Author' => array(
-			'className' => 'Author',
-			'foreignKey' => 'author_id'
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id'
 		)
 	);
 

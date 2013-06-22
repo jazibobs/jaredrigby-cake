@@ -11,9 +11,9 @@
 			<?php echo h($post['Post']['title']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Author'); ?></dt>
+		<dt><?php echo __('User'); ?></dt>
 		<dd>
-			<?php echo h($post['Post']['author']); ?>
+			<?php echo h($post['User']['name']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Category'); ?></dt>

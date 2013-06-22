@@ -3,7 +3,7 @@
 
 	<h2>About Jared</h2>
 
-	<img class="nice-border float-right" src="/jaredrigby-3/img/jared.jpg" />
+	<img class="nice-border float-right post-thumb" src="/img/jared.jpg" />
 
 	<p>I'm Jared Rigby, a Cheshire based web and applications developer. I love to write code which solves problems and firmly believe no task is too great given enough time and tea.</p>
 

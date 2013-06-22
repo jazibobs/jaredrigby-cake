@@ -9,7 +9,7 @@ class Category extends AppModel {
 	var $name = 'Category';
 
 	public $hasMany = array(
-		'Posts' => array(
+		'Post' => array(
 			'className' => 'Post',
 			'foreignKey' => 'category_id'
 		)

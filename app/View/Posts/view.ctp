@@ -1,8 +1,8 @@
 <div class="left-column float-left">
 	<div class="post-box">
 		<div class="post-content">
-			<h2><?php echo __('Title'); ?></h2>
-			<span><?php echo $this->Html->link(__($post['Category']['title']), array('action' => 'viewcategory', $post['Category']['id'])); ?> - Posted by <?php echo $this->Html->link(__($post['Author']['name']), array('action' => 'viewauthor', $post['Author']['id'])); ?></span>
+			<h2><?php echo ($post['Post']['title']); ?></h2>
+			<span><?php echo $this->Html->link(__($post['Category']['title']), array('action' => 'viewcategory', $post['Category']['id'])); ?> - Posted by <?php echo $this->Html->link(__($post['User']['name']), array('action' => 'viewuser', $post['User']['id'])); ?></span>
 			<?php echo ($post['Post']['content']); ?>
 		</div>
 	</div>

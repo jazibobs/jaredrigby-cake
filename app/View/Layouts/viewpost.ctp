@@ -39,11 +39,11 @@
 		</a>
 		<nav>
 			<ul>
-				<li><a href="/jaredrigby-3/">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Snippets</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/pages/about">About</a></li>
+				<li><a href="/posts/viewcategory/1">Projects</a></li>
+				<li><a href="/posts/viewcategory/2">Snippets</a></li>
+				<li><a href="/pages/contact">Contact</a></li>
 			</ul>
 		</nav>
 	</div>

@@ -33,9 +33,21 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	function beforeFilter() {
-        if (isset($this->params['bakery']) && $this->params['bakery'] == 'admin') {
-            $this->layout = 'admin';
-        } 
-    }
-}
+	public $components = array(
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'posts', 'action' => 'bakery_index'),
+            'logoutRedirect' => array('controller' => 'posts', 'action' => 'index')
+        )
+    ); 
+
+
+    public function beforeFilter() {
+        $this->Auth->allow('display', 'index', 'view', 'viewuser', 'viewcategory');
+
+	    //set admin area to use admin layout
+	    if (isset($this->params['bakery']) && $this->params['bakery'] == 'admin') {
+	        $this->layout = 'admin';
+	    } 
+	} 
+}  

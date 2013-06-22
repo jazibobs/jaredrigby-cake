@@ -2,7 +2,6 @@
 
 <?php 
 	$categoryarray = array();
-	
 	$key = 1;
 
 	foreach ($categories as $category):
@@ -10,6 +9,16 @@
 		$key = $key + 1;
 	endforeach;
 	unset($category);
+
+	$userarray = array();
+	$key = 1;
+
+	foreach ($users as $user):
+  		$userarray[$key] = $user['User']['name'];
+		$key = $key + 1;
+	endforeach;
+	unset($user);
+
 ?>	
 
 <?php echo $this->Form->create('Post'); ?>
@@ -18,7 +27,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('title');
-		echo $this->Form->input('author');
+		echo $this->Form->input('user_id', array('options' => $userarray));
 		echo $this->Form->input('imageurl');
 		echo $this->Form->input('category_id', array('options' => $categoryarray));
 		echo $this->Form->input('summary');

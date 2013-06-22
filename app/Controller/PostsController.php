@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class PostsController extends AppController {
 
-	var $uses = array('Post','Category','Author');
+	var $uses = array('Post','Category','User');
 
 /**
  * index method
@@ -59,7 +59,7 @@ class PostsController extends AppController {
 
 		$this->set('categories', $this->Category->find('all'));
 
-		if (!$this->Post->exists($category_id)) {
+		if (!$this->Post->Category->exists($category_id)) {
 			throw new NotFoundException(__('Invalid category'));
 		}
 		$options = array('conditions' => array('Post.category_id' => $category_id));
@@ -67,20 +67,20 @@ class PostsController extends AppController {
 	}
 
 /**	
-* viewauthor method
+* viewuser method
 *
 *	@throws 
-*	@param string $author_id
+*	@param string $user_id
 *	@return void
 */
-	public function viewauthor($author_id = null){
+	public function viewuser($user_id = null){
 
 		$this->set('categories', $this->Category->find('all'));
 
-		if (!$this->Post->exists($author_id)) {
-			throw new NotFoundException(__('Invalid category'));
+		if (!$this->Post->User->exists($user_id)) {
+			throw new NotFoundException(__('Invalid user'));
 		}
-		$options = array('conditions' => array('Post.author_id' => $author_id));
+		$options = array('conditions' => array('Post.user_id' => $user_id));
 		$this->set('posts', $this->Post->find('all', $options));
 	}
 
@@ -118,6 +118,7 @@ class PostsController extends AppController {
 	public function bakery_add() {
 
 		$this->set('categories', $this->Category->find('all'));
+		$this->set('users', $this->User->find('all'));
 
 		if ($this->request->is('post')) {
 			$this->Post->create();
@@ -140,6 +141,7 @@ class PostsController extends AppController {
 	public function bakery_edit($id = null) {
 
 		$this->set('categories', $this->Category->find('all'));
+		$this->set('users', $this->User->find('all'));
 
 		if (!$this->Post->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));

@@ -26,6 +26,7 @@ $cakeDescription = __d('cake_dev', 'Jared Rigby\'s back end is full of cakephp')
 	<title>
 		<?php echo $title_for_layout; ?> - <?php echo $cakeDescription ?>
 	</title>
+	<meta name="robots" content="noindex">
 	<?php
 		echo $this->Html->meta('icon');
 
@@ -41,8 +42,10 @@ $cakeDescription = __d('cake_dev', 'Jared Rigby\'s back end is full of cakephp')
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, '/'); ?></h1>
 			<ul>
-				<li><a href="/jaredrigby-3/bakery/posts/">Manage Posts</a></li>
-				<li><a href="/jaredrigby-3/bakery/categories/">Manage Categories</a></li>
+				<li><a href="/bakery/posts/">Manage Posts</a></li>
+				<li><a href="/bakery/categories/">Manage Categories</a></li>
+				<li><a href="/bakery/users/">Manage Users</a></li>
+				<li><a href="/users/logout/">Logout</a></li>
 			</ul>
 		</div>
 		<div id="content">
@@ -60,6 +63,6 @@ $cakeDescription = __d('cake_dev', 'Jared Rigby\'s back end is full of cakephp')
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php // echo $this->element('sql_dump'); ?>
 </body>
 </html>

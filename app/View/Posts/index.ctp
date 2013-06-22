@@ -17,9 +17,9 @@
 		<div class="post-content">
 			<h2><?php echo h($post['Post']['title']); ?></h2>
 			<span>
-				<?php echo $this->Html->link(__($post['Category']['title']), array('action' => 'viewcategory', $post['Category']['id'])); ?> - Posted by <?php echo $this->Html->link(__($post['Author']['name']), array('action' => 'viewauthor', $post['Author']['id'])); ?>
+				<?php echo $this->Html->link(__($post['Category']['title']), array('action' => 'viewcategory', $post['Category']['id'])); ?> - Posted by <?php echo $this->Html->link(__($post['User']['name']), array('action' => 'viewuser', $post['User']['id'])); ?>
 			</span>
-			<img src="<?php echo ($imageurl); ?>" class="float-right nice-border" width="100" height="100" />
+			<img src="<?php echo ($imageurl); ?>" class="float-right nice-border post-thumb" width="100" height="100" />
 			<h4><?php echo ($post['Post']['summary']); ?></h4>
 		</div>
 		<div class="post-btns">
