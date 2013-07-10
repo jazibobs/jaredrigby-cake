@@ -37,10 +37,6 @@ class PostsController extends AppController {
  */
 	public function view($id = null) {
 
-		$this->layout = 'viewpost';
-
-		$this->set('categories', $this->Category->find('all'));
-
 		if (!$this->Post->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}

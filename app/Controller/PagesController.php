@@ -52,8 +52,6 @@ class PagesController extends AppController {
  * @return void
  */
 	public function display() {
-
-		$this->layout = 'viewpost';
 		
 		$path = func_get_args();
 

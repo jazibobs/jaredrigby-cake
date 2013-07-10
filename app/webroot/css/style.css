@@ -1,103 +1,11 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-top: 2px solid #9a2f44;
+	background: url("../img/stripe-bg.png");
 }
 
-body {
-	background: url(/img/stripe-bg.png);
-	font-family: 'Open Sans', sans-serif;
-	color: #6E6E6E;
-}
-
-h1, h2, h4 {
-	font-family: 'Georgia', serif;
-}
-
-h3 {
-	font-weight: bold;
-	font-size: 16px;
-	margin: 20px 0;
-}
-
-ul {
-	list-style: square;
-	list-style-position: inside;
-}
-
-ul li {
-	font-size: 14px;
-	line-height: 20px;
-}
-
-a {
-	color: #666;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #ff9900;
-	text-decoration: underline;
-}
-
-code {
-	font-family: 'Inconsolata', sans-serif;
-	font-size: 16px;
-	color: #000;
-	background: #eee;
-	margin: 15px 0;
-}
-
-small {
-	font-size: 12px;
-}
-
-.nice-border {
-	padding: 1px;
-	border: 1px solid #ccc;
+h1, h2, h3 {
+	font-family: 'Dosis', sans-serif;
+	color: #9a2f44;
 }
 
 .float-left {
@@ -114,201 +22,123 @@ small {
 
 .center-block {
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 10px auto;
 }
 
-#container {
-	margin: 0 50px;
-	min-width: 455px;
+.nice-border {
+	padding: 1px;
+	border: 1px solid #DDDDDD;
 }
 
-#header {
-	background: #ffffff;
-	min-width: 655px;
-	padding-bottom: 15px;
-	border-bottom: 1px solid #ccc;
+textarea {
+	max-width: 100%;
 }
 
-nav {
-	width: 450px;
-	margin: 0 auto;
-}
-
-nav ul {
-	text-align: center;
-}
-
-nav ul li{
-	display: inline-block;
-	text-transform: uppercase;
-	font-size: 16px;
-	margin: 0 10px;
-}
-
-nav ul li a {
-	color: #999999;
-	text-decoration: none;
-}
-
-nav ul li a:hover {
-	color: #FF9900;
-	text-decoration: underline;
+.float-right.button {
+	margin-bottom: 0;
 }
 
 .logo {
-	display: block;
-	margin: 0 auto;
-	font-size: 40px;
-	width: 250px;
-	text-align: center;
-	line-height: 100px;
-	text-decoration: none;
-}
-
-.logo:hover {
-	text-decoration: none;
-}
-
-.jared {
-	color: #999999;
-}
-
-.rigby {
-	color: #FF9900;
-	font-family: 'Georgia', serif;
-	font-size: 1.065em;
-	font-weight: bold;
-}
-
-#content {
-	margin: 0 auto;
-	padding-bottom: 50px;
-}
-
-#viewpost {
-	margin: 0 auto;
-	width: 1000px
-}
-
-#viewpost > .left-column {
-	width: 600px;
-}
-
-#viewpost > .right-column {
-	width: 265px;
-	margin-left: 40px;
-}
-
-#viewpost > .post-box {
-	width: 100%;
-}
-
-.left-column > .post-box, .right-column > .post-box {
-	width: 100%;
-}
-
-.post-box {
-	float: left;
-	overflow: hidden;
-	background: #ffffff;
-	padding: 10px;
-	border-radius: 3px;
-	margin: 10px;
-}
-
-.post-box.masonry-brick{
-	width: 400px;
-	min-height: 240px;
-}
-
-.post-content.masonry-brick {
-	padding-bottom: 30px;
-}
-
-.post-content h2 {
-	font-size: 20px;
-	color: #FF9900;
-	text-transform: lowercase;
-	border-bottom: 1px solid #FF9900;
-	padding: 10px 0 15px 0;
-	margin-bottom: 15px;
-}
-
-.post-content h4 {
-	font-style: italic;
-	font-size: 16px;
-	line-height: 24px;
-	padding-bottom: 45px;
-}
-
-.post-content p {
-	font-size: 14px;
-	line-height: 20px;
-	margin: 10px 0;
-}
-
-.post-content span {
-	display: block;
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #6e6e6e;
-	width: 100%;
-	margin: 5px 0 10px 0;
-	text-align: right;
-}
-
-.post-content .post-thumb {
-	margin: 5px 0 10px 10px;
-}
-
-.post-content .category-list li {
-	font-size: 16px;
-	line-height: 24px;
-}
-
-.post-btns {
-	position: absolute;
-	bottom: 0;
-	background: #ffffff;
-	width: 100%;
-	padding: 15px 0;
-}
-
-.post-btns a {
-	background: #f4f4f4;
 	display: inline-block;
-	padding: 3px;
+	padding: 5% 0;
+	margin: 0 20px;
+}
+
+.logo a {
+	display: block;
+	padding: 10% 0;
+}
+
+.logo span {
+	font-size: 40px;
+	color: #9a2f44;
+	line-height: 100%;
+	font-family: 'Dosis', sans-serif;
+}
+
+.logo .desc {
+	position: relative;
+	top: 10px;
+	font-size: 22px;
+	color: #333;
+	font-weight: 400;
+}
+
+.row {
+	background: #fefefe;
+}
+
+.banner, .footer {
+	background: #8DA3B6 url(../img/banner-bg.png);
+}
+
+.banner > div {
+	height: 100%;
+}
+
+.git-info > span {
+	font-size: 1.25em;
+}
+
+.columns .panel {
 	text-align: center;
+	margin: 20px;
+}
+
+.columns .panel p {
+	margin-bottom: 10px;
+}
+
+.navigation {
+	padding: 0;
+}
+
+#content ul {
+	margin-left: 20px !important;
+}
+
+.posts h3 {
+	margin: 0 0 10px 0;
+}
+
+.posts span {
+	display: block;
+	margin-bottom: 20px;
 	text-transform: uppercase;
 	font-size: 12px;
-	font-weight: bold;
-	color: #6e6e6e;
-	text-decoration: none;
-	border-radius: 3px;
-	border: 1px solid #eeeeee;
-	margin: 5px 5px 0 0;
 }
 
 .social {
 	display: inline-block;
 	width: 48px;
 	height: 48px;
-	background: #ccc;
-	margin: 20px 41px;
+	margin: 10px 10px 0 10px;
 }
 
-.social.plus {background: url(/img/social/plus.png);}
-.social.linkedin {background: url(/img/social/linkedin.png);}
-.social.twitter {background: url(/img/social/twitter.png);}
-.social.github {background: url(/img/social/github.png);}
-.social.lastfm {background: url(/img/social/lastfm.png);}
-.social.email {background: url(/img/social/email.png);}
 
-#footer {
-	height: 50px;
-	background: #ffffff;
-	position: fixed;
-	left: 0px;
-	bottom: 0px;
-	width: 100%;
+.social.plus {background: url(../img/social/plus.png);}
+.social.linkedin {background: url(../img/social/linkedin.png);}
+.social.twitter {background: url(../img/social/twitter.png);}
+.social.github {background: url(../img/social/github.png);}
+.social.lastfm {background: url(../img/social/lastfm.png);}
+.social.email {background: url(../img/social/email.png);}
+
+.extra-bits {
+	list-style: none;
+}
+
+.extra-bits li {
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+.footer {
+	border-top: 1px solid;
+	border-bottom: 1px solid #6F9EB8;
+	margin-top: 30px;
+}
+
+.footer p {
+	margin: 10px 0;
+	text-align: center;
 }
